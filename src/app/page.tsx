@@ -63,7 +63,7 @@ const comingSoon: Movie[] = [
   {
     id: "10",
     title: "Fantastic Four",
-    poster: "/fantastic4.jpg",
+    poster: "/ff4.jpg",
     description: "A superhero movie...",
   },
 ];

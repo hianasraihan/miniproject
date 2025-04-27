@@ -40,7 +40,7 @@ export default function Navbar() {
 
   return (
     <header className="bg-gray-800 text-white w-full shadow-lg z-50">
-      <div className="sticky top-0 container mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="sticky top-0 z-50 container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <Image src="/logo.png" alt="CineMax Logo" width={200} height={200} />
@@ -68,8 +68,7 @@ export default function Navbar() {
                   <Link
                     key={movie.id}
                     href={`/movie/${movie.id}`}
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
+                    className="block px-4 py-2 hover:bg-gray-100">
                     {movie.title}
                   </Link>
                 ))}
@@ -78,15 +77,14 @@ export default function Navbar() {
           </div>
 
           {/* Theater Dropdown */}
-          <div className="relative">
+          <div className="relative z-50">
             <button
               onClick={() => setShowDropdown(!showDropdown)}
-              className="flex items-center gap-1 bg-gray-700 px-4 py-2 rounded hover:bg-gray-600 transition-all"
-            >
+              className="flex items-center gap-1 bg-gray-700 px-4 py-2 rounded hover:bg-gray-600 transition-all">
               {selectedTheater} <ChevronDown size={16} />
             </button>
             {showDropdown && (
-              <ul className="absolute top-full left-0 mt-2 bg-white text-black rounded shadow-md w-40 z-50">
+              <ul className="absolute left-0 mt-2 bg-white text-black rounded shadow-md w-40 z-50 max-h-60 overflow-y-auto">
                 {theaters.map((theater) => (
                   <li
                     key={theater}
@@ -94,8 +92,7 @@ export default function Navbar() {
                       setSelectedTheater(theater);
                       setShowDropdown(false);
                     }}
-                    className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                  >
+                    className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                     {theater}
                   </li>
                 ))}
@@ -106,8 +103,7 @@ export default function Navbar() {
           {/* Login Button */}
           <Link
             href="/register"
-            className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded text-white transition-all"
-          >
+            className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded text-white transition-all">
             Login / Sign Up
           </Link>
         </nav>

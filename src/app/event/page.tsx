@@ -4,25 +4,25 @@ const events = [
   {
     title: "Movie Night",
     price: "Rp.150.000",
-    imageUrl: "/images/movie-night.jpg",
+    imageUrl: "/night.jpg",
     link: "/events/movie-night",
   },
   {
     title: "Concert 2025",
-    price: "$Rp.500.000",
-    imageUrl: "/images/concert-2025.jpg",
+    price: "Rp.500.000", 
+    imageUrl: "/concert.jpg",
     link: "/events/concert-2025",
   },
   {
     title: "Comedy Show",
     price: "Rp.125.000",
-    imageUrl: "/images/comedy-show.jpg",
+    imageUrl: "/comedy.jpg",
     link: "/events/comedy-show",
   },
   {
     title: "Theater Play",
     price: "Rp.300.000",
-    imageUrl: "/images/theater-play.jpg",
+    imageUrl: "/theater.jpg",
     link: "/events/theater-play",
   },
 ];
@@ -35,20 +35,17 @@ const Event = () => {
         {events.map((event, index) => (
           <div
             key={index}
-            className="bg-white shadow-lg rounded-lg overflow-hidden"
-          >
+            className="bg-white shadow-lg rounded-lg overflow-hidden">
             <Link href={event.link}>
-              <a>
-                <img
-                  src={event.imageUrl}
-                  alt={event.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-4">
-                  <h2 className="text-xl font-semibold">{event.title}</h2>
-                  <p className="text-lg text-gray-600">{event.price}</p>
-                </div>
-              </a>
+              <img
+                src={event.imageUrl}
+                alt={event.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h2 className="text-xl font-semibold">{event.title}</h2>
+                <p className="text-lg text-gray-600">{event.price}</p>
+              </div>
             </Link>
           </div>
         ))}
