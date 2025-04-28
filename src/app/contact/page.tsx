@@ -26,7 +26,7 @@ const Contact = () => {
             href="https://instagram.com/webfilm"
             target="_blank"
             className="text-blue-400 hover:underline">
-            @Cinemax
+            @CineMax
           </a>
         </p>
         <p>Alamat: Jl. Film Raya No. 123, Jakarta</p>

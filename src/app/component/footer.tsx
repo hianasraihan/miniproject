@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-
+import { FaTwitter, FaInstagram, FaFacebookF } from "react-icons/fa"; // Import icon-iconnya
 
 const Footer = () => {
   return (
@@ -10,13 +10,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           {/* Column 1: Brand Info */}
           <div>
-          <Link href="/" className="flex text-9xl items-center space-x-2">
-          <Image src="/logo.png" alt="CineMax Logo" width={120} height={120} />
-          <span className="text-2xl font-bold"></span>
-        </Link>
-            <p className="mt-3 text-gray-400">
-              Watch Anything You Want
-            </p>
+            <Link href="/" className="flex text-9xl items-center space-x-2">
+              <Image
+                src="/logo.png"
+                alt="CineMax Logo"
+                width={120}
+                height={120}
+              />
+              <span className="text-2xl font-bold"></span>
+            </Link>
+            <p className="mt-3 text-gray-400">Watch Anything You Want</p>
           </div>
 
           {/* Column 2: Links */}
@@ -50,15 +53,31 @@ const Footer = () => {
           <div>
             <h2 className="text-lg font-semibold mb-3">Follow Us</h2>
             <div className="flex justify-center md:justify-start space-x-4">
+              <Link
+                href="https://twitter.com"
+                target="_blank"
+                className="hover:text-gray-400 text-2xl">
+                <FaTwitter />
+              </Link>
+              <Link
+                href="https://instagram.com"
+                target="_blank"
+                className="hover:text-gray-400 text-2xl">
+                <FaInstagram />
+              </Link>
+              <Link
+                href="https://facebook.com"
+                target="_blank"
+                className="hover:text-gray-400 text-2xl">
+                <FaFacebookF />
+              </Link>
             </div>
           </div>
         </div>
 
         {/* Bottom Section */}
         <div className="mt-8 text-center text-gray-400 text-sm">
-          <p>
-            &copy; {new Date().getFullYear()} CINEMAX. All rights reserved.
-          </p>
+          <p>&copy; {new Date().getFullYear()} CINEMAX. All rights reserved.</p>
         </div>
       </div>
     </footer>

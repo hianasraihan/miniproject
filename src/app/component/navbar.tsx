@@ -16,7 +16,7 @@ const allMovies = [
 
 export default function Navbar() {
   const [showDropdown, setShowDropdown] = useState(false);
-  const [selectedTheater, setSelectedTheater] = useState("Select Theater");
+  const [selectedTheater, setSelectedTheater] = useState("Select Location");
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredMovies, setFilteredMovies] = useState(allMovies);
 

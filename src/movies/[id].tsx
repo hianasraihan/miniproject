@@ -6,9 +6,6 @@ const MovieDetail = () => {
   const router = useRouter();
   const { id } = router.query; // Get the movie ID from the URL
 
-  // Here you would typically fetch the movie data from an API or a static data file
-  // For the sake of the example, we are using a hardcoded movie list
-
   const movies: Movie[] = [
     { id: "1", title: "Dune: Part Two", poster: "/dune.jpg", description: "A sci-fi movie..." },
     { id: "2", title: "Godzilla x Kong", poster: "/gk.jpg", description: "Monsters clash in this epic battle..." },
